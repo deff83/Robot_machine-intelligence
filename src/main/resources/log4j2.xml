@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+ 
+    <Appenders>
+        <Console name="Console1" target="SYSTEM_OUT">
+	        <PatternLayout pattern="1 %d  [%t] %m %ex%n"/>
+        </Console>
+        <Console name="Console2" target="SYSTEM_OUT">
+	        <PatternLayout pattern="%d %5p [%t] %m %ex%n"/>
+        </Console>
+        
+        <File name="file" fileName="log.log">
+            
+	      
+	    </File>
+    </Appenders>
+ 
+    <Loggers>
+       
+ 		<logger name="com.Deff83.Robot" level="info" additivity="false">
+ 		    <AppenderRef ref="Console2"/>
+ 		</logger>
+        <!-- Root Logger all  -->
+        <Root level="info">
+            <AppenderRef ref="Console1"/>
+        </Root>
+    </Loggers>
+ 
+ 
+</Configuration>
